@@ -9,37 +9,50 @@
 
 3. Add the following lines to each page on your site:
 
-    <link rel="stylesheet" href="cart.css" type="text/css" />
+    ```
+    <link rel="stylesheet" href="cart.css">
     <script src="js/cart.js"></script>
+    ```
 
 4. Add an onload event to the body of each page that needs to read cart data.
 
+    ```
     <body onload="loadCart()">
+    ```
 
 5. On the cart page, include empty div tags with the id="cart" where you would like the cart to appear. You should not put anything between the tags. The cart.js file has functions that will automatically create a table of all items in the cart between the tags.                                                            
+    ```
     <div id="cart"></div>
+    ```
 
    If you preview the cart at this point, you should see a message stating the cart is empty along with a working link to the home page.                              
 6. For each item you would like to add to the cart, you'll need to create an add-to-cart button. The buttons onclick attribute should call the addToCart function and pass the items ID as a parameter.
 
-    <input type="button" onclick="addToCart('001')" value="Add to cart" />
+    ```
+    <input type="button" onclick="addToCart('001')" value="Add to cart">
+    ```
 
    You can test by clicking the button. Each time you click a button, a popup should notify you that the item was added to the cart. Visit the cart page and confirm that the items were added to the cart and price calculations are correct.
 
 7. The page that confirms an order has been successfully placed can use an onload event to empty the cart.                                                           
+    ```
     <body onload="emptyCart()">
-
+    ```
 8. Modify cart.css as you see fit. Most cells have unique class names which should give plenty of options regarding styling the cart table.                           
 
 ## More options:
 
 a. You can also add tags to display the count of items in the cart. Each time an item is added/removed from the cart, item count will update automatically.
 
+    ```
     <span id="item_count">0</span>
+    ```
 
 b. You do not need to add a link to your checkout page as it will  be reachable by clicking 'checkout' on the cart page. However, if you do choose to provide a link to your checkout page, add an id="checkout_link" attribute. Then the link will point to the cart rather than checkout if the cart page is empty.
 
+    ```
     <a id="checkout_link" href="checkout.html">Checkout</a>
+    ```
 
 c. Cart Link Widget:
 
