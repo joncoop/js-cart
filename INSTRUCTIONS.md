@@ -9,13 +9,16 @@
 
 3. Add the following lines to each page on your site:
 
-    <link rel="stylesheet" href="cart.css">
-    <script src="js/cart.js"></script>
+```html
+<link rel="stylesheet" href="cart.css">
+<script src="js/cart.js"></script>
+```
 
 4. Add an onload event to the body of each page that needs to read cart data.
 
-    <body onload="loadCart()">
-
+```html
+<body onload="loadCart()">
+```
 5. On the cart page, include empty div tags with the id="cart" where you would like the cart to appear. You should not put anything between the tags. The cart.js file has functions that will automatically create a table of all items in the cart between the tags.                                                            
     <div id="cart"></div>
 
