@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2015 Jon Cooper
+
+  This file is part of js-cart.
+
+  Documentation, related files, and licensing can be found at
+
+    <https://github.com/joncoop/js-cart>.
+-->
+
+<html>
+<head>
+<title>Demo Shopping Site</title>
+<link rel="stylesheet" href="css/cart.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="loadCart()">
+
+<h1><a href="index.html">Demo Shopping Site</a></h1>
+
+<p>There are <span id="item_count">0</span> items in <a href="cart_example.html">your cart</a>.</p>
+
+<h2>Our Products</h2>
+
+<h3>Whatchahoozit - $0.99</h3>
+<input type="button" onclick="addToCart('ABC')" value="Add to Cart" />
+
+<h3>Thingamabob - $9.95</h3>
+<input type="button" onclick="addToCart('123')" value="Add to Cart" />
+
+<h3>Doomahitchy - $20.00</h3>
+<input type="button" onclick="addToCart('xyz')" value="Add to Cart" />
+
+<script src="js/cart.js"></script>
+
+</body>
+</html>
