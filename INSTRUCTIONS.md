@@ -1,3 +1,7 @@
+# Instructions
+
+## Getting Started
+
 1. Copy the files cart.js, and cart.css to the folder with your site.
 
 2. Open the cart.js file and edit the configuration section.
