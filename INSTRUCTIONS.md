@@ -61,4 +61,21 @@
 
 ## Cart Link Widget:
 
-Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the car, and a dynamic link to the cart or checkout page. Copy the html code from widget.txt to the html source code on the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings' below. CSS for the widget can be found in cart.css.
+Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the car, and a dynamic link to the cart or checkout page. Copy the html code below to the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings' below. CSS for the widget can be found in cart.css.
+
+#### Screenshot:
+
+![cart widget](resources/widget_screenshot.png)
+
+#### Code:
+
+```html
+<!-- begin cart link widget -->
+<div id="cart_links">
+    <a href="cart.html"><img class="cart_icon" src="img/cart_icon.png" alt="cart icon" /></a>
+    <span class="cart_link"><a id="cart_link" href="#">Shopping Cart</a></span> <br />
+    <span class="item_count">Items (<span id="item_count">0</span>)</span>
+    <span class="checkout_link"><a id="checkout_link" href="#">Checkout</a></span>
+</div>
+<!-- end widget -->
+```
