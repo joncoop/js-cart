@@ -47,13 +47,13 @@
 
 ## More options:
 
-You can also add tags to display the count of items in the cart. Each time an item is added/removed from the cart, item count will update automatically.
+1. You can also add tags to display the count of items in the cart. Each time an item is added/removed from the cart, item count will update automatically.
 
     ```html
     <span id="item_count">0</span>
     ```
 
-You do not need to add a link to your checkout page as it will  be reachable by clicking 'checkout' on the cart page. However, if you do choose to provide a link to your checkout page, add an id="checkout_link" attribute. Then the link will point to the cart rather than checkout if the cart page is empty.
+2. You do not need to add a link to your checkout page as it will  be reachable by clicking 'checkout' on the cart page. However, if you do choose to provide a link to your checkout page, add an id="checkout_link" attribute. Then the link will point to the cart rather than checkout if the cart page is empty.
 
     ```html
     <a id="checkout_link" href="checkout.html">Checkout</a>
