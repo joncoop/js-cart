@@ -58,7 +58,7 @@ You do not need to add a link to your checkout page as it will  be reachable by 
     ```html
     <a id="checkout_link" href="checkout.html">Checkout</a>
     ```
-    
+
 ## Cart Link Widget:
 
 Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the car, and a dynamic link to the cart or checkout page. Copy the html code from widget.txt to the html source code on the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings' below. CSS for the widget can be found in cart.css.
