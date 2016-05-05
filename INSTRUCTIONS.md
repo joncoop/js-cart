@@ -39,32 +39,31 @@
     <div id="cart"></div>
     ```
    If you preview the cart at this point, you should see a message stating the cart is empty along with a working link to the home page.                              
-6. For each item you would like to add to the cart, you'll need to create an add-to-cart button. The buttons `onclick` attribute should call the `addToCart` function and pass the items ID as a parameter.
+6. The simplest way to allow shoppers to add product to their cart is by creating an 'Add to Cart' button. The button's `onclick` attribute should call the `addToCart` function and pass the item's ID as a parameter.
 
     ```html
     <input type="button" onclick="addToCart('001')" value="Add to cart">
     ```
+
+    It is also possible to create drop-down menus with options product options such as color or size. The second parameter of the `setChoice` function should match the `id` attribute of the corresponding add-to-cart input button. Option values correspond to individual product IDs in the `cart.js` configuration. Also be sure that the first option has a value of `""`. Notice that the input is disabled unless a selection is made.
+
+    ```html
+    <h3>Doomahitchy - $20.00</h3>
+    <select onchange="setChoice(this, 'xyz')">
+      <option value="">Select a color...</option>
+      <option value="xyz-red">Red</option>
+      <option value="xyz-green">Green</option>
+      <option value="xyz-blue">Blue</option>
+    </select>
+    <input id="xyz" type="button" value="Add to Cart" disabled>
+    ```
+
    You can test by clicking the button. Each time you click a button, a popup should notify you that the item was added to the cart. Visit the cart page and confirm that the items were added to the cart and price calculations are correct.
 
 7. The page that confirms an order has been successfully placed can use an `onload` event to empty the cart.                                                                   
     ```html
     <body onload="emptyCart()">
     ```
-
-## Products with options
-
-It is also possible to create drop-down menus with options product options such as color or size. The second parameter of the `setChoice` function should match the `id` of the corresponding add-to-cart button. Option values correspond to individual product IDs in the `cart.js` configuration section. Be sure that the first option has a value of `""`. Notice that the input is disabled unless a selection is made.
-
-```html
-<h3>Doomahitchy - $20.00</h3>
-<select onchange="setChoice(this, 'xyz')">
-  <option value="">Select a color...</option>
-  <option value="xyz-red">Red</option>
-  <option value="xyz-green">Green</option>
-  <option value="xyz-blue">Blue</option>
-</select>
-<input id="xyz" type="button" value="Add to Cart" disabled>
-```
 
 ## More options
 
