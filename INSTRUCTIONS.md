@@ -51,7 +51,7 @@
     <body onload="emptyCart()">
     ```
 
-## Product options
+## Products with options
 
 Here's an example of how you can have options for a product such as size or color. The values for each option correspond to individual products in the `cart.js` configuration section. Notice that the button is disabled unless a selection is made. Be sure that the first option has a value of `""`.
 
@@ -66,7 +66,7 @@ Here's an example of how you can have options for a product such as size or colo
 <input id="xyz" type="button" value="Add to Cart" disabled>
 ```
 
-## More options:
+## More options
 
 1. You can also add tags to display the count of items in the cart. Each time an item is added/removed from the cart, item count will update automatically.
 
@@ -74,7 +74,7 @@ Here's an example of how you can have options for a product such as size or colo
     <span id="item_count">0</span>
     ```
 
-2. You do not need to add a link to your checkout page as it will  be reachable by clicking 'checkout' on the cart page. However, if you do choose to provide a link to your checkout page, add an `id="checkout_link"` attribute. Then the link will point to the cart page rather than checkout if the cart is empty.
+2. You do not need to add a link to your checkout page as it will  be reachable by clicking 'checkout' on the cart page. However, if you do choose to provide a link to your checkout page, you can add an `id="checkout_link"` attribute. Then the link will point to the cart page rather than checkout if the cart is empty.
 
     ```html
     <a id="checkout_link" href="checkout.html">Checkout</a>
@@ -82,7 +82,7 @@ Here's an example of how you can have options for a product such as size or colo
 
 3. Modify `cart.css` as you see fit. Most cells have unique class names which should give plenty of options regarding styling the cart table.                    
 
-## Cart Link Widget:
+## Cart Link Widget
 
 Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the cart, and a dynamic link to the cart or checkout page. Copy the html code below to the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings'. CSS for the widget can be found in cart.css.
 
