@@ -24,6 +24,9 @@ var products = new Array();
 products[0] = new Product("ABC", "Whatchahoozit",  0.99);
 products[1] = new Product("123", "Thingamabob",    9.95);
 products[2] = new Product("xyz", "Doomahitchy",  20.00);
+products[3] = new Product("xyz-sm", "Doomahitchy (Small)",  20.00);
+products[4] = new Product("xyz-md", "Doomahitchy (Medium)",  20.00);
+products[5] = new Product("xyz-lg", "Doomahitchy (Large)",  20.00);
 
 
 // tax rate for your state
@@ -76,6 +79,19 @@ function loadCart()
     }
 
     refresh();
+}
+
+/**
+ *
+ */
+function setChoice(option, button_id) {
+  if (option.value.length == 0) {
+    document.getElementById(button_id).disabled = true;
+  }
+  else {
+    document.getElementById(button_id).disabled = false;
+    document.getElementById(button_id).onclick = function() { addToCart(option.value); };
+  }
 }
 
 /**

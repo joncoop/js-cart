@@ -13,7 +13,7 @@
 <html>
 <head>
 <title>Demo Shopping Site</title>
-<link rel="stylesheet" href="css/cart.css" type="text/css" />
+<link rel="stylesheet" href="css/cart.css" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -26,13 +26,25 @@
 <h2>Our Products</h2>
 
 <h3>Whatchahoozit - $0.99</h3>
-<input type="button" onclick="addToCart('ABC')" value="Add to Cart" />
+<input type="button" onclick="addToCart('ABC')" value="Add to Cart">
 
 <h3>Thingamabob - $9.95</h3>
-<input type="button" onclick="addToCart('123')" value="Add to Cart" />
+<input type="button" onclick="addToCart('123')" value="Add to Cart">
+
+<p>Here's an example of how you can have options for a product such as size or color.
+Each option does need to be listed individually in the cart.js configuration section.
+Notice that the button is disabled unless a selection is made. Be sure that the first
+option has a value of "".</p>
 
 <h3>Doomahitchy - $20.00</h3>
-<input type="button" onclick="addToCart('xyz')" value="Add to Cart" />
+<select onchange="setChoice(this, 'xyz')">
+  <option value="">Select a size...</option>
+  <option value="xyz-sm">Small</option>
+  <option value="xyz-md">Medium</option>
+  <option value="xyz-lg">Large</option>
+</select>
+<input id="xyz" type="button" value="Add to Cart" disabled>
+
 
 <script src="js/cart.js"></script>
 
