@@ -53,15 +53,15 @@
 
 ## Products with options
 
-Here's an example of how you can have options for a product such as size or color. The values for each option correspond to individual products in the `cart.js` configuration section. Notice that the button is disabled unless a selection is made. Be sure that the first option has a value of `""`.
+Here's an example of how you can have options for a product such as color or size. The values for each option correspond to individual products in the `cart.js` configuration section. Notice that the input is disabled unless a selection is made. Be sure that the first option has a value of `""`.
 
 ```html
 <h3>Doomahitchy - $20.00</h3>
 <select onchange="setChoice(this, 'xyz')">
-  <option value="">Select a size...</option>
-  <option value="xyz-sm">Small</option>
-  <option value="xyz-md">Medium</option>
-  <option value="xyz-lg">Large</option>
+  <option value="">Select a color...</option>
+  <option value="xyz-red">Red</option>
+  <option value="xyz-green">Green</option>
+  <option value="xyz-blue">Blue</option>
 </select>
 <input id="xyz" type="button" value="Add to Cart" disabled>
 ```
