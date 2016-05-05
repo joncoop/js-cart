@@ -53,7 +53,7 @@
 
 ## Products with options
 
-It is also possible to create drop-down menus with options product options such as color or size. The second parameter of the `setChoice` function should match the `id` of the corresponding add-to-cart button. Option values correspond to individual products in the `cart.js` configuration section. Be sure that the first option has a value of `""`. Notice that the input is disabled unless a selection is made.
+It is also possible to create drop-down menus with options product options such as color or size. The second parameter of the `setChoice` function should match the `id` of the corresponding add-to-cart button. Option values correspond to individual product IDs in the `cart.js` configuration section. Be sure that the first option has a value of `""`. Notice that the input is disabled unless a selection is made.
 
 ```html
 <h3>Doomahitchy - $20.00</h3>

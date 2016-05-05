@@ -23,10 +23,9 @@
 var products = new Array();
 products[0] = new Product("ABC", "Whatchahoozit",  0.99);
 products[1] = new Product("123", "Thingamabob",    9.95);
-products[2] = new Product("xyz", "Doomahitchy",  20.00);
-products[3] = new Product("xyz-red", "Doomahitchy (Red)",  20.00);
-products[4] = new Product("xyz-green", "Doomahitchy (Green)",  20.00);
-products[5] = new Product("xyz-blue", "Doomahitchy (Blue)",  20.00);
+products[2] = new Product("xyz-red", "Doomahitchy (Red)",  20.00);
+products[3] = new Product("xyz-green", "Doomahitchy (Green)",  20.00);
+products[4] = new Product("xyz-blue", "Doomahitchy (Blue)",  20.00);
 
 
 // tax rate for your state
