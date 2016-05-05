@@ -6,9 +6,9 @@
 
 2. Connect each page of your site to the `cart.css` file:
 
-        ```html
-        <link rel="stylesheet" href="[path_to_css]/cart.css">
-        ```
+    ```html
+    <link rel="stylesheet" href="[path_to_css]/cart.css">
+    ```
 
 3. Connect each page of your site to the `cart.js` file:
 
@@ -53,7 +53,7 @@
 
 ## Products with options
 
-Here's an example of how you can have options for a product such as color or size. The values for each option correspond to individual products in the `cart.js` configuration section. Notice that the input is disabled unless a selection is made. Be sure that the first option has a value of `""`.
+It is also possible to create drop-down menus with options product options such as color or size. The second parameter of the `setChoice` function should match the `id` of the corresponding add-to-cart button. Option values correspond to individual products in the `cart.js` configuration section. Be sure that the first option has a value of `""`. Notice that the input is disabled unless a selection is made.
 
 ```html
 <h3>Doomahitchy - $20.00</h3>
