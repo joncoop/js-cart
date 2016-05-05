@@ -45,6 +45,24 @@
     ```
 8. Modify cart.css as you see fit. Most cells have unique class names which should give plenty of options regarding styling the cart table.                           
 
+## Product options
+
+Here's an example of how you can have options for a product such as size or color.
+Each option does need to be listed individually in the cart.js configuration section.
+Notice that the button is disabled unless a selection is made. Be sure that the first
+option has a value of "".
+
+```html
+<h3>Doomahitchy - $20.00</h3>
+<select onchange="setChoice(this, 'xyz')">
+  <option value="">Select a size...</option>
+  <option value="xyz-sm">Small</option>
+  <option value="xyz-md">Medium</option>
+  <option value="xyz-lg">Large</option>
+</select>
+<input id="xyz" type="button" value="Add to Cart" disabled>
+```
+
 ## More options:
 
 1. You can also add tags to display the count of items in the cart. Each time an item is added/removed from the cart, item count will update automatically.
