@@ -82,19 +82,6 @@ function loadCart()
 }
 
 /**
- *
- */
-function setChoice(option, button_id) {
-  if (option.value.length == 0) {
-    document.getElementById(button_id).disabled = true;
-  }
-  else {
-    document.getElementById(button_id).disabled = false;
-    document.getElementById(button_id).onclick = function() { addToCart(option.value); };
-  }
-}
-
-/**
  * Adds item to cart. Include button on product pages.
  *
  * Usage: <input type="button" onclick="addToCart("[item id]")" value="Add to cart" />
@@ -185,10 +172,26 @@ function Product(id,name,price)
 // helper functions. don't reference these on html pages. for interal use only.
 
 /**
+ * Changes the onclick attribute for the Add-to-cart button to selected option.
+ *
+ * @param {String} option ID of selected product
+ * @param {String} button_id ID of corresponding add-to-cart button
+ */
+function setChoice(option, button_id) {
+  if (option.value.length == 0) {
+    document.getElementById(button_id).disabled = true;
+  }
+  else {
+    document.getElementById(button_id).disabled = false;
+    document.getElementById(button_id).onclick = function() { addToCart(option.value); };
+  }
+}
+
+/**
  * Searches the products array for a product ID and returns the index of that product.
  * Product IDs are not case-sensitive.
  *
- * @param {String} id  ID of product to find
+ * @param {String} id ID of product to find
  * @returns {Number} index of product, -1 if product ID is not found
  */
 function search(id)
