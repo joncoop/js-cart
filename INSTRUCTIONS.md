@@ -80,11 +80,9 @@ Here's an example of how you can have options for a product such as color or siz
     <a id="checkout_link" href="checkout.html">Checkout</a>
     ```
 
-3. Modify `cart.css` as you see fit. Most cells have unique class names which should give plenty of options regarding styling the cart table.                    
-
 ## Cart Link Widget
 
-Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the cart, and a dynamic link to the cart or checkout page. Copy the html code below to the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings'. CSS for the widget can be found in cart.css.
+Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the cart, and a dynamic link to the cart or checkout page. Copy the html code below to the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings'.
 
 #### Screenshot:
 
@@ -102,3 +100,8 @@ Instead of the options above, you can also include a widget which displays a car
 </div>
 <!-- end widget -->
 ```
+
+
+## Optional Styling
+
+The `cart.css` file contains basic styling for both the cart table and widget. Most cells in the cart table have unique class names which should give plenty of options for styling the cart table if desired. Styles for the cart widget are also in this file.                 
