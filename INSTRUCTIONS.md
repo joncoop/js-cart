@@ -16,30 +16,35 @@
     <script src="[path_to_js]/cart.js"></script>
     ```
 
-## Configuration
-2. Open the cart.js file and edit the configuration section.
 
-    a. Create as many products as you want. Just make sure that the ID is unique for each item. IDs don't need to be sequential and they can include any alpha-numeric character. Product IDs are not case-sensitive.
+## Cart settings
 
-    b. Edit the shipping section. Set `free_shipping` to `false` if you plan on charging for shipping, `true` otherwise. Set `shipping_rate` to the amount you'd like to charge for shipping.
+Open the cart.js file and edit the configuration section.
 
-    c. Make sure the file names in `site settings` match those used on your site.
+1. Create as many products as you want. Just make sure that the ID is unique for each item. IDs don't need to be sequential and they can include any alpha-numeric character. Product IDs are not case-sensitive.
 
-    d. Optionally, you can edit the `cart_name` settings. The `cart_name` doesn't affect how the site works. However if you are running more than cart on the same server, each should have a unique name.
+2. Edit the shipping section. Set `free_shipping` to `false` if you plan on charging for shipping, `true` otherwise. Set `shipping_rate` to the amount you'd like to charge for shipping.
 
-3. Add an `onload` event to the body of each page that needs to read cart data.
+3. Make sure the file names in `site settings` match those used on your site.
+
+4. Optionally, you can edit the `cart_name` settings. The `cart_name` doesn't affect how the site works. However if you are running more than cart on the same server, each should have a unique name.
+
+
+## Using js-cart functions in your HTML
+
+1. Add an `onload` event to the body of each page that needs to read cart data.
 
     ```html
     <body onload="loadCart()">
     ```
 
-5. On the cart page, include empty div tags with the `id="cart"` where you would like the cart to appear. You should not put anything between the tags. The `cart.js` file has functions that will automatically create a table of all items in the cart between the tags.
+2. On the cart page, include empty div tags with the `id="cart"` where you would like the cart to appear. You should not put anything between the tags. The `cart.js` file has functions that will automatically create a table of all items in the cart between the tags.
 
     ```html                                                        
     <div id="cart"></div>
     ```
    If you preview the cart at this point, you should see a message stating the cart is empty along with a working link to the home page.                              
-6. The simplest way to allow shoppers to add product to their cart is by creating an 'Add to Cart' button. The button's `onclick` attribute should call the `addToCart` function and pass the item's ID as a parameter.
+3. The simplest way to allow shoppers to add product to their cart is by creating an 'Add to Cart' button. The button's `onclick` attribute should call the `addToCart` function and pass the item's ID as a parameter.
 
     ```html
     <input type="button" onclick="addToCart('001')" value="Add to cart">
@@ -60,10 +65,11 @@
 
    You can test by clicking the button. Each time you click a button, a popup should notify you that the item was added to the cart. Visit the cart page and confirm that the items were added to the cart and price calculations are correct.
 
-7. The page that confirms an order has been successfully placed can use an `onload` event to empty the cart.                                                                   
+4. The page that confirms an order has been successfully placed can use an `onload` event to empty the cart.                                                                   
     ```html
     <body onload="emptyCart()">
     ```
+
 
 ## More options
 
@@ -79,7 +85,8 @@
     <a id="checkout_link" href="checkout.html">Checkout</a>
     ```
 
-## Cart Link Widget
+
+## Cart widget
 
 Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the cart, and a dynamic link to the cart or checkout page. Copy the html code below to the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings'.
 
