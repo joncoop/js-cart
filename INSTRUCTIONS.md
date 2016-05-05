@@ -50,7 +50,7 @@
 Here's an example of how you can have options for a product such as size or color.
 Each option does need to be listed individually in the cart.js configuration section.
 Notice that the button is disabled unless a selection is made. Be sure that the first
-option has a value of "".
+option has a value of `""`.
 
 ```html
 <h3>Doomahitchy - $20.00</h3>
