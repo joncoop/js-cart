@@ -23,7 +23,7 @@ Open the cart.js file and edit the configuration section.
 
 1. Create as many products as you want. Just make sure that the ID is unique for each item. IDs don't need to be sequential and they can include any alpha-numeric character. Product IDs are not case-sensitive.
 
-2. Edit the shipping section. Set `free_shipping` to `false` if you plan on charging for shipping, `true` otherwise. Set `shipping_rate` to the amount you'd like to charge for shipping.
+2. Edit the shipping section. Set `allow_free_shipping` to `false` if you plan on always charging for shipping, `true` otherwise. If free shipping is allowed, the `free_shipping_quota` is the minimum amount that needs to be spent to apply free shipping. If shipping is always be free regardless of the amount spent, then set `allow_free_shipping` to `true` and the `free_shipping_quota` to `0.00`.
 
 3. Make sure the file names in `site settings` match those used on your site.
 

@@ -33,15 +33,16 @@ var sales_tax_rate = 0.06;
 
 
 // shipping
-var free_shipping = false;
-var shipping_rate = 6.99; // (will not be applied if free_shipping = true)
+var shipping_rate = 6.99;           // will not be applied if free_shipping = true
+var free_shipping_allowed = true;   // ship free if spending quota is met
+var free_shipping_quota = 50.00     // applied if free_shipping_allowed, set to 0.00 for always free
 
 
 // site settings
 var home_page_url = "index.html";
 var cart_url = "cart_example.html";
 var checkout_url = "checkout_example.html";
-var cart_name = "my_cart"; // (must change if multiple carts run on same domain)
+var cart_name = "my_cart"; // must change if multiple carts run on same domain
 
 
 //************** END OF CONFIGURATION, DO NOT* MODIFY CODE BELOW THIS LINE!! **************//
@@ -377,15 +378,19 @@ function cartToTable()
         html_cart_str += "<td class='tax'>$" + tax.toFixed(2) + "</th>";
         html_cart_str += "</tr>";
 
-        if (!free_shipping)
-        {
-            html_cart_str += "<tr class='shipping'>";
-            html_cart_str += "<th class='shipping' colspan='3'>Shipping:</th>";
-            html_cart_str += "<td class='shipping'>$" + shipping_rate.toFixed(2) + "</td>";
-            html_cart_str += "</tr>";
 
-            total += shipping_rate;
+        html_cart_str += "<tr class='shipping'>";
+        html_cart_str += "<th class='shipping' colspan='3'>Shipping:</th>";
+
+        if (free_shipping_allowed && sub_total >= free_shipping_quota)
+        {
+            html_cart_str += "<td class='shipping'>" + "FREE!" + "</td>";
         }
+        else
+        {
+            html_cart_str += "<td class='shipping'>$" + shipping_rate + "</td>";
+        }
+        html_cart_str += "</tr>";
 
         html_cart_str += "<tr class='total'>";
         html_cart_str += "<th class='total'colspan='3'>Total:</th>";
