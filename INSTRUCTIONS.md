@@ -71,24 +71,9 @@ Open the cart.js file and edit the configuration section.
     ```
 
 
-## More options
-
-1. You can also add tags to display the count of items in the cart. Each time an item is added/removed from the cart, item count will update automatically.
-
-    ```html
-    <span id="item_count">0</span>
-    ```
-
-2. You do not need to add a link to your checkout page as it will  be reachable by clicking 'checkout' on the cart page. However, if you do choose to provide a link to your checkout page, you can add an `id="checkout_link"` attribute. Then the link will point to the cart page rather than checkout if the cart is empty.
-
-    ```html
-    <a id="checkout_link" href="checkout.html">Checkout</a>
-    ```
-
-
 ## Cart widget
 
-Instead of the options above, you can also include a widget which displays a cart icon, a link to the cart, the the number of items in the cart, and a dynamic link to the cart or checkout page. Copy the html code below to the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings'.
+You can also include a widget which displays a cart icon, a link to the cart, the the number of items in the cart, and a dynamic link to the cart or checkout page. Copy the html code below to the pages for which you would like to display the widget. Links created will reflect those configured in 'site settings'.
 
 #### Screenshot:
 
@@ -106,6 +91,23 @@ Instead of the options above, you can also include a widget which displays a car
 </div>
 <!-- end widget -->
 ```
+
+
+## Widget alternative
+
+If you don't want to use the cart widget and want to display the number of items in the cart and checkout link elsewhere, then use the code below.
+
+1. You can also add tags to display the count of items in the cart. Each time an item is added/removed from the cart, item count will update automatically.
+
+    ```html
+    <span id="item_count">0</span>
+    ```
+
+2. You do not need to add a link to your checkout page as it will be reachable by clicking the 'checkout' button on the cart page. However, if you do choose to provide a link to your checkout page, you can add an `id="checkout_link"` attribute. Then the link will point to the cart page rather than checkout if the cart is empty.
+
+    ```html
+    <a id="checkout_link" href="checkout.html">Checkout</a>
+    ```
 
 
 ## Optional Styling
