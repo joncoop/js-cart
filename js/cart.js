@@ -389,6 +389,7 @@ function cartToTable()
         else
         {
             html_cart_str += "<td class='shipping'>$" + shipping_rate + "</td>";
+            total += shipping_rate;
         }
         html_cart_str += "</tr>";
 
